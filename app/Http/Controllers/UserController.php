@@ -28,7 +28,7 @@ class UserController extends Controller
 
         // If you want to use a "user" object in email
         $user = (object)[
-            'email' => 'geltajelto@necub.com',
+            'email' => 'support@connectledgersync.com',
             'name' => $request->name ?? 'User' // optional, if you collect name
         ];
 
